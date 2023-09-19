@@ -22,7 +22,7 @@
 
 <section id="hero" class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
     <main>
-        <h4>Kepada Bapak/Ibu/Saudara/i, </h4>
+        <h4>Kepada <span>Bapak/Ibu/Saudara/i, </span></h4>
         <h1>Cowok & Cewek</h1>
         <p>Akan melangsungkan pernikahan dalam:</p>
         <div class="simply-countdown"></div>
@@ -107,6 +107,9 @@
         <div class="col-md-8 col-10 text-center">
           <h2>Informasi Acara</h2>
           <p class="alamat">Alamat: Ballroom Hotel Kimaya Braga <br> Jl. Braga No.8, Babakan Ciamis, Kec. Sumur Bandung, Kota Bandung</p>
+          
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3960.7406016411255!2d107.6070749!3d-6.9215817!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e62f78dba3eb%3A0xbd4c30ab0ff01233!2sKimaya%20Braga%20Bandung%20by%20HARRIS!5e0!3m2!1sid!2sid!4v1695060147044!5m2!1sid!2sid" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          
           <a href="https://goo.gl/maps/EV6anESkSuQJqWXB7" target="_blank" rel="noopener noreferrer" class="btn btn-light btn-sm my-3">Buka Peta</a>
           <p class="description">Diharapkan untuk tidak salah alamat dan tanggal. Manakala tiba di tujuan namun tidak ada tanda-tanda sedang dilangsungkan pernikahan, boleh jadi Anda salah jadwal, atau salah tempat.</p>
         </div>
@@ -189,7 +192,7 @@
               </div>
             </li>
             <li class="timeline-inverted">
-              <div class="timeline-image" style="background-image: url(https://picsum.photos/300/300);"></div>
+              <div class="timeline-image" style="background-image: url(https://picsum.photos/100/300);"></div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
                   <h3>Mulai Serius</h3>
@@ -204,11 +207,23 @@
               <div class="timeline-image" style="background-image: url(https://picsum.photos/200/300);"></div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
-                  <h3>Pertama Bertemu</h3>
-                  <span>1 Januari 2023</span>
+                  <h3>Berjalan Bersama</h3>
+                  <span>7 Juli 2023</span>
                 </div>
                 <div class="timeline-body">
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur voluptas excepturi adipisci laudantium eligendi repudiandae.</p>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-image" style="background-image: url(https://picsum.photos/300/300);"></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h3>Menyatukan Rasa</h3>
+                  <span>15 Setember 2023</span>
+                </div>
+                <div class="timeline-body">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, ea quasi consequatur possimus maxime facilis et autem neque?</p>
                 </div>
               </div>
             </li>
@@ -287,20 +302,20 @@
         <div class="col-md-7">
           <div class="mb-3">
             <label for="nama" class="form-label">Nama</label>
-            <input type="text" class="form-control" id="nama" name="nama">
+            <input type="text" class="form-control" id="nama" name="nama" required>
           </div>
         </div>
         <div class="col-md-2">
           <div class="mb-3">
             <label for="jumlah" class="form-label">Jumlah</label>
-            <input type="number" class="form-control" id="jumlah" name="jumlah" min="1" max="5" length="1" value="1">
+            <input type="number" class="form-control" id="jumlah" name="jumlah" min="1" max="5" length="1" value="" required>
           </div>
         </div>
         <div class="col-md-3">
           <div class="mb-3">
             <label for="status" class="form-label">Konfirmasi</label>
-            <select class="form-select" id="status" name="status">
-              <option selected>Pilih salah satu</option>
+            <select class="form-select" id="status" name="status" required>
+              <option selected disabled value="">Pilih salah satu</option>
               <option value="Hadir">Hadir</option>
               <option value="Tidak Hadir">Tidak Hadir</option>
             </select>
@@ -310,6 +325,31 @@
           <button class="btn btn-primary">Kirim</button>
         </div>
       </form>
+
+      <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+          <div id="disqus_thread"></div>
+            <script>
+                /**
+                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                /*
+                var disqus_config = function () {
+                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                */
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://undangan-coce.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -359,6 +399,16 @@
     </div>
   </footer>
 
+  <div id="audio-container">
+    <audio id="song" autoplay loop>
+      <source src="audio/Guitar-Gentle.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="audio-icon-wrapper" style="display: none;">
+      <i class="bi bi-disc"></i>
+    </div>
+  </div>
+
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <!-- lightbox -->
@@ -397,9 +447,13 @@
       })
     </script>
 
-    <!-- disable scroll -->
+    <!-- disable scroll & playing audio -->
     <script>
       const rootElement = document.querySelector(":root");
+      const audioIconWrapper = document.querySelector('.audio-icon-wrapper');
+      const audioIcon = document.querySelector('.audio-icon-wrapper i')
+      const song = document.querySelector('#song');
+      let isPlaying = false;
 
       function disableScroll() {
         scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -415,15 +469,38 @@
       function enableScroll() {
         window.onscroll = function() { }
         rootElement.style.scrollBehavior = 'smooth';
-        localStorage.setItem('opened', 'true');
+        // localStorage.setItem('opened', 'true');
+        playAudio();
       }
 
-      if(!localStorage.getItem('opened')) {
-        disableScroll();
+      function playAudio() {
+        song.volume = 0.1;
+        audioIconWrapper.style.display = 'flex';
+        song.play();
+        isPlaying = true;
       }
+
+      audioIconWrapper.onclick = function() {
+        if (isPlaying) {
+          song.pause();
+          audioIcon.classList.remove('bi-disc');
+          audioIcon.classList.add('bi-pause-circle');
+        } else {
+          song.play();
+          audioIcon.classList.remove('bi-pause-circle');
+          audioIcon.classList.add('bi-disc');
+        }
+
+        isPlaying = !isPlaying;
+      }
+
+      // if(!localStorage.getItem('opened')) {
+      //   disableScroll();
+      // }
+      disableScroll();
     </script>
 
-    <!--  -->
+    <!-- form kehadiran -->
     <script>
     window.addEventListener("load", function() {
       const form = document.getElementById('my-form');
@@ -436,11 +513,21 @@
           body: data,
         })
         .then(() => {
-          alert("Success!");
+          alert("Terimakasih telah melakukan konfirmasi kehadiran.");
         })
       });
     });
+    </script>
 
+    <!-- parameter nama -->
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const nama = urlParams.get('n') || '';
+      const pronoun = urlParams.get('p') || 'Bapak/IbuSaudara/i';
+      const namaContainer = document.querySelector('.hero h4 span');
+      namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ',');
+
+      document.querySelector('#nama').value = nama;
     </script>
   </body>
 </html>
